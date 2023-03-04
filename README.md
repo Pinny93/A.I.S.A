@@ -1,2 +1,2 @@
-# L.I.S.A.
-Lisa is super atificial
+# A.I.S.A. Artificial Intelligence Support Assistant
+Code is comming soon
