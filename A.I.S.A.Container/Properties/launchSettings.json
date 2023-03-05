@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "A.I.S.A.Container": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
