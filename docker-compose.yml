@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  a.i.s.a.mastodon.compose:
+  a.i.s.a.container:
     image: ${DOCKER_REGISTRY-}aisa
     build:
       context: .
-      dockerfile: A.I.S.A.Mastodon.Compose/Dockerfile
+      dockerfile: A.I.S.A.Container/Dockerfile
     networks:
       - aisa_net
 

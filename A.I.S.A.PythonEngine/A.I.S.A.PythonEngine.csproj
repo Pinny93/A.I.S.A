@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="python\Python34\**" />
+    <EmbeddedResource Remove="python\Python34\**" />
+    <None Remove="python\Python34\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="3.4.0" />
+    <PackageReference Include="IronPython.StdLib" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\A.I.S.A.Utils\A.I.S.A.Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="python\" />
+  </ItemGroup>
+
+</Project>

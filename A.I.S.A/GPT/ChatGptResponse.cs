@@ -1,19 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace A.I.S.A_.GPT
 {
     public class ChatGptResponse
     {
-        public string Id { get; set; }
-        public string Object { get; set; }
-        public long Created { get; set; }
-        public string Model { get; set; }
-        public List<ChatGptChoice> Choices { get; set; }
-        public ChatGptUsage Usage { get; set; }
+        [JsonPropertyName("choices")]
+        public List<ChatGPTChoice>? Choices
+        {
+            get;
+            set;
+        }
+
+        [JsonPropertyName("usage")]
+        public ChatGPTUsage? Usage
+        {
+            get;
+            set;
+        }
+    }
+
+    public class ChatGPTUsage
+    {
+        [JsonPropertyName("prompt_tokens")]
+        public int PromptTokens
+        {
+            get;
+            set;
+        }
+
+        [JsonPropertyName("completion_token")]
+        public int CompletionTokens
+        {
+            get;
+            set;
+        }
+
+        [JsonPropertyName("total_tokens")]
+        public int TotalTokens
+        {
+            get;
+            set;
+        }
+    }
+
+    [DebuggerDisplay("Text = {Text}")]
+    public class ChatGPTChoice
+    {
+        [JsonPropertyName("text")]
+        public string? Text
+        {
+            get;
+            set;
+        }
     }
 
     public class ChatGptChoice

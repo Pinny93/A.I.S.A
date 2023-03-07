@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\A.I.S.A.PythonEngine\A.I.S.A.PythonEngine.csproj" />
+    <ProjectReference Include="..\A.I.S.A.Utils\A.I.S.A.Utils.csproj" />
     <ProjectReference Include="..\A.I.S.A\A.I.S.A.csproj" />
   </ItemGroup>
 

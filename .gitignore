@@ -352,3 +352,11 @@ MigrationBackup/
 /A.I.S.A.Mastodon.Compose/.env
 /A.I.S.A/OpenAI.API.key
 /.env
+/A.I.S.A.PythonEngine/python/Python34
+/A.I.S.A.PythonEngine/pythonlibs/contextvars
+/A.I.S.A.PythonEngine/pythonlibs/immutables
+/A.I.S.A.PythonEngine/pythonlibs/openai-python
+/A.I.S.A.PythonEngine/pythonlibs/types_typing_extensions
+/A.I.S.A.PythonEngine/pythonlibs/typing
+/A.I.S.A.PythonEngine/pythonlibs/typing_extensions
+/OpenAI.API.key

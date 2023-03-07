@@ -14,7 +14,7 @@ namespace A.I.S.A_.DBModel
 
         public string Prompt { get; set; } = String.Empty;
 
-        public string Answer { get; set; } = String.Empty;
+        public string? Answer { get; set; }
 
         public string AnswerFull { get; set; } = String.Empty;
     }

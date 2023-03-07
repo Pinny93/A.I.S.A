@@ -20,9 +20,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\A.I.S.A.PythonEngine\A.I.S.A.PythonEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="OpenAI.API.key">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="REM Powershell &quot;$(ProjectDir)Build\Postbuild.ps1&quot; -projectDir &quot;$(ProjectDir)&quot; -configurationName &quot;$(ConfigurationName)&quot; -targetName &quot;$(TargetName)&quot; -targetPath &quot;$(TargetPath)&quot;" />
+  </Target>
 
 </Project>
