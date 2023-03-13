@@ -24,7 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="OpenAI.API.key">
+    <Folder Include="Keys\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\digikabu.key" Link="Keys\digikabu.key">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\OpenAI.API.key" Link="Keys\OpenAI.API.key">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

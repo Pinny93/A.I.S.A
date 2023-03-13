@@ -1,0 +1,47 @@
+# Name of the pipeline
+name: AISA Build and Test Pipeline
+
+# Where the pipeline should run (e.g. Windows, Linux, macOS)
+trigger:
+- main
+
+# Define stages
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    displayName: Build and Publish Job
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '7.x'
+    - script: dotnet restore
+      displayName: Restore
+    - script: dotnet build --configuration Release --no-restore
+      displayName: Build
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
+        projects: 'A.I.S.A/A.I.S.A.csproj'
+        arguments: '--configuration Release --output $(Build.ArtifactStagingDirectory)'
+      displayName: Publish
+
+- stage: Test
+  jobs:
+  - job: Test
+    displayName: Test Job
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '7.x'
+    - script: dotnet restore
+      displayName: Restore
+    - script: dotnet test --configuration Release --no-build
+      displayName: Test

@@ -15,7 +15,7 @@ public class Program
 
         if (args.Length > 0)
         {
-            return new AppRunner<AISA>().Run(args);
+            return HandleCommand(Console.Out, args);
         }
 
         int result = Program.HandleInteractiveMode();
@@ -24,8 +24,22 @@ public class Program
         return result;
     }
 
+    public static int HandleCommand(TextWriter outWriter, params string[] args)
+    {
+        var runner = new AppRunner<AISA>();
+
+        AISA.AnswerWriter = outWriter;
+        if (outWriter != Console.Out) { AISA.ErrorWriter = outWriter; }
+
+        Console.SetOut(outWriter);
+
+        return runner.Run(args);
+    }
+
     private static int HandleInteractiveMode()
     {
+        AISA.IsInteractive = true;
+
         while (true)
         {
             Console.Write("A.I.S.A./> ");
@@ -38,7 +52,7 @@ public class Program
 
                 default:
                     CommandLineStringSplitter spl = new();
-                    new AppRunner<AISA>().Run(spl.Split(command).ToArray());
+                    HandleCommand(Console.Out, spl.Split(command).ToArray());
                     break;
             }
         }

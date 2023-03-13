@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.env = .env
 		.env.sample = .env.sample
 		.gitignore = .gitignore
+		digikabu.key = digikabu.key
 		OpenAI.API.key = OpenAI.API.key
 		prepare.sh = prepare.sh
 		provision.sh = provision.sh
@@ -30,6 +31,14 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "A.I.S.A.Python", "A.I.S.A.Python\A.I.S.A.Python.pyproj", "{0E6D8AAB-368E-430B-9DAF-3C35FC244528}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.I.S.A.Utils", "A.I.S.A.Utils\A.I.S.A.Utils.csproj", "{098A9440-704A-4F7D-9E1C-387919DC37A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.I.S.A.Tests", "A.I.S.A.Tests\A.I.S.A.Tests.csproj", "{F1951664-1753-401E-A83B-F1264C6A81B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.I.S.A.RestInterface", "A.I.S.A.RestInterface\A.I.S.A.RestInterface.csproj", "{738F419C-FE5E-4797-A3A4-48322A76E182}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.I.S.A.WebApp", "A.I.S.A.WebApp\A.I.S.A.WebApp.csproj", "{27F2D489-DC0F-4420-A990-B829E80481BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.I.S.A.Bot", "A.I.S.A.Bot\A.I.S.A.Bot.csproj", "{209FBF65-6EBF-49D2-AE70-FF242D2B1175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +68,22 @@ Global
 		{098A9440-704A-4F7D-9E1C-387919DC37A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{098A9440-704A-4F7D-9E1C-387919DC37A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{098A9440-704A-4F7D-9E1C-387919DC37A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1951664-1753-401E-A83B-F1264C6A81B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1951664-1753-401E-A83B-F1264C6A81B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1951664-1753-401E-A83B-F1264C6A81B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1951664-1753-401E-A83B-F1264C6A81B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738F419C-FE5E-4797-A3A4-48322A76E182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738F419C-FE5E-4797-A3A4-48322A76E182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738F419C-FE5E-4797-A3A4-48322A76E182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738F419C-FE5E-4797-A3A4-48322A76E182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F2D489-DC0F-4420-A990-B829E80481BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F2D489-DC0F-4420-A990-B829E80481BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F2D489-DC0F-4420-A990-B829E80481BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F2D489-DC0F-4420-A990-B829E80481BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209FBF65-6EBF-49D2-AE70-FF242D2B1175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209FBF65-6EBF-49D2-AE70-FF242D2B1175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209FBF65-6EBF-49D2-AE70-FF242D2B1175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209FBF65-6EBF-49D2-AE70-FF242D2B1175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
